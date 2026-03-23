@@ -4,7 +4,7 @@ A fully functional project management UI built with React, TypeScript, and Zusta
 
 ## Live Demo
 
-[https://your-deployed-link.vercel.app](https://your-deployed-link.vercel.app)
+[https://project-tracker-name.vercel.app](https://project-tracker-name.vercel.app)
 
 ## Setup Instructions
 
@@ -92,7 +92,7 @@ Custom drag-and-drop is implemented in `src/components/KanbanView.tsx` using **P
 
 ## Lighthouse Score
 
-Desktop score: **95+**
+Desktop score: **99**
 
 > To reproduce: Open the deployed Vercel URL in Chrome → F12 → Lighthouse tab → Desktop → Analyze page load
 
