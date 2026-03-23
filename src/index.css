@@ -1,0 +1,107 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --bg: #0d0d0f;
+  --bg2: #151518;
+  --bg3: #1c1c21;
+  --bg4: #242429;
+  --border: rgba(255, 255, 255, 0.07);
+  --border2: rgba(255, 255, 255, 0.13);
+  --text: #f0f0f4;
+  --text2: #9090a0;
+  --text3: #606070;
+  --accent: #7c6ff7;
+  --accent2: #a89cf7;
+  --red: #e25050;
+  --amber: #e59940;
+  --green: #4cad7c;
+  --blue: #4a9ce8;
+  --pink: #d4538a;
+  --r: 8px;
+  --r2: 12px;
+}
+
+html, body, #root {
+  height: 100%;
+}
+
+body {
+  font-family: 'DM Sans', sans-serif;
+  background: var(--bg);
+  color: var(--text);
+  overflow: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+::-webkit-scrollbar {
+  width: 4px;
+  height: 4px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: var(--border2);
+  border-radius: 2px;
+}
+
+button {
+  font-family: inherit;
+  cursor: pointer;
+  border: none;
+  background: none;
+  color: inherit;
+}
+
+input, select {
+  font-family: inherit;
+}
+
+/* Collab avatar pop-in animation */
+@keyframes avatarPop {
+  0% {
+    opacity: 0;
+    transform: scale(0.5);
+  }
+  70% {
+    transform: scale(1.2);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* ── Tablet responsive (768px) ─────────────────────────────── */
+@media (max-width: 1024px) {
+  /* Kanban: allow horizontal scroll on tablet */
+  .kanban-board {
+    gap: 8px;
+    padding: 8px;
+  }
+  /* List view: hide assignee first-name on small screens */
+  .list-assignee-name {
+    display: none;
+  }
+  /* FilterBar: wrap on tablet */
+  .filter-bar {
+    gap: 6px;
+  }
+}
+
+@media (max-width: 768px) {
+  /* Ensure top bar doesn't overflow on tablet */
+  .topbar-title {
+    display: none;
+  }
+}
