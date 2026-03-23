@@ -103,7 +103,7 @@ Desktop score: **99**
 
 ---
 
-## Explanation (150–250 words)
+## Explanation 
 
 The hardest UI problem was implementing the drag placeholder without causing layout shift in the Kanban columns. The naive approach — removing the card from the DOM while dragging — collapses the column height and causes every card below to jump up. Instead, I keep the card in the DOM at all times but toggle its visual state: when dragging, the card renders as a transparent dashed box with the same height as a normal card. This means the column layout never changes during a drag — only the card's appearance does.
 
